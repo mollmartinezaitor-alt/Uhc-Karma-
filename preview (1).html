@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UHC KARMA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Orbitron',sans-serif;
+background:linear-gradient(135deg,#02142b,#0b3d91,#1c6ed5);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+header{
+padding:80px 20px;
+}
+
+.logo{
+width:350px;
+max-width:90%;
+animation:float 4s infinite ease-in-out;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-15px)}
+100%{transform:translateY(0)}
+}
+
+h1{
+font-size:60px;
+color:#FFD700;
+margin-top:20px;
+}
+
+.subtitle{
+font-size:20px;
+opacity:0.9;
+margin-top:10px;
+}
+
+.ipbox{
+margin-top:25px;
+display:inline-block;
+background:#00000088;
+padding:15px 25px;
+border-radius:10px;
+font-size:18px;
+}
+
+button{
+background:#FFD700;
+border:none;
+padding:10px 20px;
+margin-left:10px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+.players{
+margin-top:15px;
+font-size:18px;
+}
+
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+color:#FFD700;
+font-size:36px;
+margin-bottom:30px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#00000066;
+padding:30px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.staff{
+font-size:18px;
+line-height:1.8;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+padding:12px;
+border-bottom:1px solid #ffffff22;
+}
+
+th{
+color:#FFD700;
+}
+
+.countdown{
+font-size:28px;
+margin-top:20px;
+}
+
+footer{
+margin-top:50px;
+padding:30px;
+background:black;
+}
+
+a{
+color:#FFD700;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.png" class="logo">
+
+<h1>UHC KARMA</h1>
+
+<p class="subtitle">
+Servidor competitivo de UHC Rankeds, Meetups y Torneos
+</p>
+
+<div class="ipbox">
+
+IP: <span id="ip">UhcKarma.exaroton.me</span>
+
+<button onclick="copyIP()">Copiar</button>
+
+</div>
+
+<div class="players">
+👥 Jugadores online: <span id="players">Cargando...</span>
+</div>
+
+</header>
+
+<section>
+
+<h2>Sobre el Servidor</h2>
+
+<p>
+UHC Karma es un servidor donde se organizan partidas de UHC de larga duración con sistema competitivo llamado <b>Rankeds</b>.
+También organizamos <b>Meetups</b>, <b>torneos</b> y eventos especiales para la comunidad.
+</p>
+
+</section>
+
+<section>
+
+<h2>Modos de Juego</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚔️ Rankeds</h3>
+<p>Compite en partidas clasificatorias y sube en el ranking.</p>
+</div>
+
+<div class="card">
+<h3>🔥 Meetups</h3>
+<p>Partidas rápidas PvP con equipamiento directo.</p>
+</div>
+
+<div class="card">
+<h3>🏆 Torneos</h3>
+<p>Eventos organizados por el staff con premios.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Ranking</h2>
+
+<table>
+
+<tr>
+<th>Jugador</th>
+<th>Puntos</th>
+</tr>
+
+<tr>
+<td>AitorM05</td>
+<td>2500</td>
+</tr>
+
+<tr>
+<td>Franchutecmc</td>
+<td>2200</td>
+</tr>
+
+<tr>
+<td>JoahStar</td>
+<td>1800</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Próximo Evento</h2>
+
+<div class="countdown" id="countdown">
+Cargando...
+</div>
+
+</section>
+
+<section>
+
+<h2>Staff</h2>
+
+<div class="staff">
+
+<b>Owner</b><br>
+AitorM05
+
+<br><br>
+
+<b>Administradores</b><br>
+AitorM05<br>
+Franchutecmc
+
+<br><br>
+
+<b>Moderadores</b><br>
+JoahStar<br>
+iTony
+
+<br><br>
+
+<b>Helper</b><br>
+Kike08
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Discord</h2>
+
+<a href="https://discord.gg/ZPMfzVr6yU">
+<button>Entrar al Discord</button>
+</a>
+
+<br><br>
+
+<iframe src="https://discord.com/widget?id=TU_ID_DISCORD&theme=dark"
+width="350"
+height="500"
+allowtransparency="true"
+frameborder="0">
+</iframe>
+
+</section>
+
+<section>
+
+<h2>Redes Sociales</h2>
+
+<a href="https://x.com/uhckarma">
+Síguenos en X
+</a>
+
+</section>
+
+<footer>
+
+© UHC KARMA Temporada 4
+
+</footer>
+
+<script>
+
+function copyIP(){
+navigator.clipboard.writeText("UhcKarma.exaroton.me");
+alert("IP copiada!");
+}
+
+fetch("https://api.mcsrvstat.us/2/UhcKarma.exaroton.me")
+.then(res=>res.json())
+.then(data=>{
+if(data.online){
+document.getElementById("players").innerText=data.players.online
+}else{
+document.getElementById("players").innerText="Servidor offline"
+}
+})
+
+var eventDate = new Date("2026-04-01").getTime()
+
+var x=setInterval(function(){
+
+var now=new Date().getTime()
+var distance=eventDate-now
+
+var days=Math.floor(distance/(1000*60*60*24))
+var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60))
+var minutes=Math.floor((distance%(1000*60*60))/(1000*60))
+
+document.getElementById("countdown").innerHTML=
+days+"d "+hours+"h "+minutes+"m "
+
+},1000)
+
+</script>
+
+</body>
+</html>
